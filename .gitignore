@@ -43,6 +43,8 @@ lerna-debug.log*
 out/
 build/
 dist/
+next-env.d.ts
+tsconfig.tsbuildinfo
 
 # Testing
 .nyc_output
