@@ -154,14 +154,13 @@ export default function DashboardLayout({
     router.push('/admin/login');
   };
 
-  // Prevent hydration mismatch by only rendering after client hydration
   if (!isHydrated) {
     return (
       <div className="flex h-screen bg-gray-100">
         <div className="w-64 bg-gradient-to-b from-gray-900 to-gray-800" />
         <div className="flex-1 ml-64">
           <div className="h-20 bg-white border-b border-gray-200" />
-          <div className="p-8" />
+          <div className="p-8">{children}</div>
         </div>
       </div>
     );
