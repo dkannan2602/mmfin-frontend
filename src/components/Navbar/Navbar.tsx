@@ -16,7 +16,7 @@ const navLinks = [
 ];
 
 const PHONE_NUMBER = "+91 98765 43210";
-const EMAIL = "info@realfinance.in";
+const EMAIL = "info@maduraimeenakshifinance.in";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,10 +69,10 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-full bg-blue-700 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">RE</span>
+              <span className="text-white font-bold text-sm">MM</span>
             </div>
             <span className="text-blue-800 font-bold text-xl tracking-tight">
-              RealFinance
+              Madurai Meenakshi Finance
             </span>
           </div>
 

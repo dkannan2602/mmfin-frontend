@@ -177,7 +177,7 @@ export default function DashboardLayout({
       >
         {/* Logo */}
         <div className="p-6 flex items-center justify-between border-b border-gray-700">
-          {sidebarOpen && <h2 className="text-xl font-bold">RealFinance</h2>}
+          {sidebarOpen && <h2 className="text-xl font-bold">Madurai Meenakshi Finance</h2>}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="hover:bg-gray-700 p-2 rounded transition-colors"

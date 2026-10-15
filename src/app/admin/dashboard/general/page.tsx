@@ -25,7 +25,7 @@ export default function GeneralDashboard() {
       {/* Header */}
       <div>
         <h2 className="text-3xl font-bold text-gray-900">General Dashboard</h2>
-        <p className="text-gray-600 mt-2">Welcome to RealFinance Admin Dashboard</p>
+        <p className="text-gray-600 mt-2">Welcome to Madurai Meenakshi Finance Admin Dashboard</p>
       </div>
 
       {/* Stats Grid */}

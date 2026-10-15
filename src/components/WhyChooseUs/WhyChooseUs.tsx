@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">
-            The RealFinance Advantage
+            The Madurai Meenakshi Finance Advantage
           </h2>
           <p className="text-blue-200 max-w-2xl mx-auto text-base">
             We don&apos;t just process loans — we build long-term relationships

@@ -4,7 +4,7 @@ import { BrandWhatsapp } from "tabler-icons-react";
 
 const WHATSAPP_NUMBER = "919876543210"; // Replace with actual number
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi! I'm interested in learning more about RealFinance loan options. Can you help me?"
+  "Hi! I'm interested in learning more about Madurai Meenakshi Finance loan options. Can you help me?"
 );
 
 export default function WhatsAppWidget() {

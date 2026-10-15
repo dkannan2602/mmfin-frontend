@@ -58,7 +58,7 @@ export default function ContactSection() {
   const [contactInfo, setContactInfo] = useState<ContactInfo>({
     officeAddress: '123, Anna Salai, Chennai – 600 002, Tamil Nadu',
     phone: '+91 98765 43210',
-    email: 'info@realfinance.in',
+    email: 'info@maduraimeenakshifinance.in',
     businessHours: 'Mon – Sat: 9:00 AM – 7:00 PM'
   });
   const [submitted, setSubmitted] = useState(false);

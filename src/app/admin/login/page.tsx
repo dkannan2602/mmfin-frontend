@@ -56,7 +56,7 @@ export default function AdminLogin() {
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-12 text-center">
-            <h1 className="text-4xl font-bold text-white mb-2">RealFinance</h1>
+            <h1 className="text-4xl font-bold text-white mb-2">Madurai Meenakshi Finance</h1>
             <p className="text-blue-100">Admin Portal</p>
           </div>
 

@@ -45,9 +45,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RE</span>
+                <span className="text-white font-bold text-sm">MM</span>
               </div>
-              <span className="text-white font-bold text-xl">RealFinance</span>
+              <span className="text-white font-bold text-xl">Madurai Meenakshi Finance</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Your trusted partner for all loan requirements. We connect
@@ -98,7 +98,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {year || 2026} RealFinance. All rights reserved.
+            &copy; {year || 2026} Madurai Meenakshi Finance. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">
             Designed & developed for our customers

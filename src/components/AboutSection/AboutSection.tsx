@@ -38,7 +38,7 @@ export default function AboutSection() {
               <span className="text-blue-700">Best Loan Deals</span>
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-6">
-              RealFinance is a leading loan consultancy firm helping individuals
+              Madurai Meenakshi Finance is a leading loan consultancy firm helping individuals
               and businesses across Tamil Nadu get the right financial solutions.
               We work with top banks and NBFCs to get you the best interest
               rates with minimal paperwork and quick approvals.
