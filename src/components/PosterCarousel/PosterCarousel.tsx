@@ -40,14 +40,14 @@ export default function PosterCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-16 md:py-20 lg:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3">
             Our <span className="text-blue-600">Financial Products</span>
           </h2>
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg">
             Explore our range of loan solutions tailored for you
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function PosterCarousel() {
         {/* Slider Container */}
         <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-gray-50">
           {/* Slides Wrapper */}
-          <div className="relative h-96 sm:h-[420px] md:h-[500px] lg:h-[600px]">
+          <div className="relative h-64 sm:h-80 md:h-96 lg:h-[550px]">
             {posters.map((poster, index) => {
               let position = "translate-x-full opacity-0";
               let delay = 0;
@@ -77,12 +77,12 @@ export default function PosterCarousel() {
                     isTransitioning ? "" : ""
                   }`}
                 >
-                  <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-white flex items-center justify-center p-8 sm:p-10 md:p-12 lg:p-16">
+                  <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-white flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
                     <Image
                       src={poster.src}
                       alt={poster.alt}
                       fill
-                      className="object-contain p-0"
+                      className="object-contain p-2 sm:p-3 md:p-4"
                       quality={95}
                       priority={index === currentIndex}
                     />
@@ -92,59 +92,10 @@ export default function PosterCarousel() {
             })}
           </div>
 
-          {/* Side Indicators - Vertical */}
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
-            {posters.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setIsTransitioning(true);
-                  setCurrentIndex(index);
-                }}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? "bg-blue-600 h-3 w-10"
-                    : "bg-gray-400 h-2 w-2 hover:bg-gray-600"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
 
-          {/* Side Indicators - Vertical (Right) */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
-            {posters.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setIsTransitioning(true);
-                  setCurrentIndex(index);
-                }}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? "bg-blue-600 h-3 w-10"
-                    : "bg-gray-400 h-2 w-2 hover:bg-gray-600"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Bottom Info */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full">
-            <span className="text-white text-sm font-medium">
-              {currentIndex + 1} <span className="text-gray-300">/ {posters.length}</span>
-            </span>
-          </div>
         </div>
 
-        {/* Slide Counter Below */}
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center gap-2">
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
-            <p className="text-gray-600 text-sm">Slides auto-rotate every 5 seconds</p>
-          </div>
-        </div>
+
       </div>
     </section>
   );

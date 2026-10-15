@@ -24,26 +24,29 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       {/* Top Info Bar */}
-      <div className="bg-blue-900 text-white py-1.5 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
-          <div className="flex items-center gap-4">
-            <a
-              href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-              className="flex items-center gap-1 hover:text-cyan-300 transition-colors"
-            >
-              <Phone size={14} />
-              {PHONE_NUMBER}
-            </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="flex items-center gap-1 hover:text-cyan-300 transition-colors"
-            >
-              <Mail size={14} />
-              {EMAIL}
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-gray-300">Follow:</span>
+      <div className="bg-blue-900 text-white py-2 sm:py-1.5 px-3 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+          {/* Phone on Mobile */}
+          <a
+            href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
+            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors text-xs sm:text-sm"
+          >
+            <Phone size={14} />
+            <span>{PHONE_NUMBER}</span>
+          </a>
+
+          {/* Email - Hidden on Mobile */}
+          <a
+            href={`mailto:${EMAIL}`}
+            className="hidden sm:flex items-center gap-1.5 hover:text-cyan-300 transition-colors text-xs sm:text-sm"
+          >
+            <Mail size={14} />
+            <span>{EMAIL}</span>
+          </a>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="text-gray-300 hidden sm:inline text-xs">Follow:</span>
             {[
               { icon: BrandFacebook, href: "#", label: "Facebook" },
               { icon: BrandInstagram, href: "#", label: "Instagram" },
