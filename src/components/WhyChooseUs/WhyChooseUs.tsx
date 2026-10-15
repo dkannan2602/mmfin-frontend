@@ -17,7 +17,8 @@ const features = [
     description:
       "Your financial data is protected with bank-grade encryption. We never share your information without consent.",
     highlight: "100% Safe",
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    bgClass: "from-emerald-500 to-cyan-500",
+    badgeClass: "bg-emerald-500",
   },
   {
     icon: Clock,
@@ -25,7 +26,8 @@ const features = [
     description:
       "From application to approval in 48 hours. Get instant eligibility checks and same-day document verification.",
     highlight: "48 Hour Approval",
-    gradient: "from-blue-500 via-indigo-500 to-purple-500",
+    bgClass: "from-blue-500 to-purple-500",
+    badgeClass: "bg-blue-500",
   },
   {
     icon: Award,
@@ -33,7 +35,8 @@ const features = [
     description:
       "Access to 25+ banks and NBFCs. We compare rates across lenders to find you the lowest interest options.",
     highlight: "Starting 8.5% p.a.",
-    gradient: "from-orange-500 via-amber-500 to-yellow-500",
+    bgClass: "from-orange-500 to-yellow-500",
+    badgeClass: "bg-orange-500",
   },
   {
     icon: Headphones,
@@ -41,7 +44,8 @@ const features = [
     description:
       "Dedicated loan advisors available throughout your journey. Get answers in minutes, not days.",
     highlight: "24/7 Assistance",
-    gradient: "from-pink-500 via-rose-500 to-red-500",
+    bgClass: "from-pink-500 to-red-500",
+    badgeClass: "bg-pink-500",
   },
   {
     icon: TrendingUp,
@@ -49,7 +53,8 @@ const features = [
     description:
       "95% application success rate. Our pre-screening process ensures you apply to the right lenders first time.",
     highlight: "95% Success",
-    gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
+    bgClass: "from-violet-500 to-fuchsia-500",
+    badgeClass: "bg-violet-500",
   },
   {
     icon: CheckCircle2,
@@ -57,7 +62,8 @@ const features = [
     description:
       "What you see is what you pay. Complete transparency in processing fees, interest rates, and documentation.",
     highlight: "No Surprises",
-    gradient: "from-lime-500 via-green-500 to-emerald-500",
+    bgClass: "from-lime-500 to-emerald-500",
+    badgeClass: "bg-lime-500",
   },
 ];
 
@@ -65,7 +71,7 @@ export default function WhyChooseUs() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+    <section className="relative py-20 bg-linear-to-b from-slate-50 to-white overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
@@ -83,7 +89,7 @@ export default function WhyChooseUs() {
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Experience The Difference With{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               MM Finance
             </span>
           </h2>
@@ -109,14 +115,14 @@ export default function WhyChooseUs() {
                   : 'border-gray-200 shadow-lg hover:border-gray-300'
               }`}>
                 {/* Gradient Border Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 transition-opacity duration-500 ${
+                <div className={`absolute inset-0 bg-linear-to-br ${feature.bgClass} opacity-0 transition-opacity duration-500 ${
                   activeCard === index ? 'opacity-100' : ''
                 }`} />
                 
                 {/* Content Container */}
-                <div className="relative bg-white m-[2px] rounded-2xl p-8 h-full">
+                <div className="relative bg-white m-0.5 rounded-2xl p-8 h-full">
                   {/* Icon Circle */}
-                  <div className={`relative mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-1 transform transition-all duration-500 ${
+                  <div className={`relative mb-6 w-16 h-16 rounded-2xl bg-linear-to-br ${feature.bgClass} p-1 transform transition-all duration-500 ${
                     activeCard === index ? 'scale-110 rotate-6' : 'scale-100 rotate-0'
                   }`}>
                     <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
@@ -125,7 +131,7 @@ export default function WhyChooseUs() {
                   </div>
 
                   {/* Highlight Badge */}
-                  <div className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${feature.gradient} text-white`}>
+                  <div className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold ${feature.badgeClass} text-white`}>
                     {feature.highlight}
                   </div>
 
@@ -140,7 +146,7 @@ export default function WhyChooseUs() {
                   </p>
 
                   {/* Animated Check Mark */}
-                  <div className={`absolute bottom-8 right-8 w-10 h-10 rounded-full bg-gradient-to-br ${feature.gradient} flex items-center justify-center transform transition-all duration-500 ${
+                  <div className={`absolute bottom-8 right-8 w-10 h-10 rounded-full bg-linear-to-br ${feature.bgClass} flex items-center justify-center transform transition-all duration-500 ${
                     activeCard === index ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
                   }`}>
                     <CheckCircle2 className="w-6 h-6 text-white" />
@@ -152,7 +158,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="mt-20 bg-linear-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 md:p-12 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl font-bold text-white">10,000+</div>
