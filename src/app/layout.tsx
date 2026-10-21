@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Madurai Meenakshi Finance – Trusted Loan Consultants",
+  title: "Meenakshi Associate – Trusted Loan Consultants",
   description:
     "Fast approvals, low interest rates, and expert guidance for Home Loans, Personal Loans, Business Loans & more.",
 };

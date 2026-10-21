@@ -40,12 +40,12 @@ export default function PosterCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-linear-to-b from-gray-50 to-white py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3">
-            Our <span className="text-blue-600">Financial Products</span>
+            Our <span className="text-amber-600">Financial Products</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg">
             Explore our range of loan solutions tailored for you
@@ -53,9 +53,9 @@ export default function PosterCarousel() {
         </div>
 
         {/* Slider Container */}
-        <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-gray-50">
+        <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl bg-linear-to-br from-amber-50 to-orange-50 border border-amber-200">
           {/* Slides Wrapper */}
-          <div className="relative h-64 sm:h-80 md:h-96 lg:h-[550px]">
+          <div className="relative h-64 sm:h-80 md:h-96 lg:h-137.5">
             {posters.map((poster, index) => {
               let position = "translate-x-full opacity-0";
               let delay = 0;
@@ -77,7 +77,7 @@ export default function PosterCarousel() {
                     isTransitioning ? "" : ""
                   }`}
                 >
-                  <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-white flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
+                  <div className="relative w-full h-full bg-linear-to-br from-yellow-50 via-amber-50 to-orange-50 flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
                     <Image
                       src={poster.src}
                       alt={poster.alt}

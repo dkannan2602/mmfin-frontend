@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Twitter } from "lucide-react";
+import Image from "next/image";
 import {
   BrandFacebook,
   BrandInstagram,
@@ -42,11 +43,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MM</span>
-              </div>
-              <span className="text-white font-bold text-xl">Madurai Meenakshi Finance</span>
+            <div className="mb-4">
+              <Image
+                src="/Image/logo/logo3.png"
+                alt="Meenakshi Associate"
+                width={120}
+                height={90}
+                priority
+                className="h-28 w-auto rounded-md mb-6"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Your trusted partner for all loan requirements. We connect
@@ -64,7 +69,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors"
                 >
                   <social.icon size={18} className="text-white" />
                 </a>
@@ -97,7 +102,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {year || 2026} Madurai Meenakshi Finance. All rights reserved.
+            &copy; {year || 2026} Meenakshi Associate. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">
             Designed & developed for our customers

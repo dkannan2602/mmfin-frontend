@@ -51,7 +51,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-blue-700 font-semibold text-sm uppercase tracking-widest">
+          <span className="text-amber-700 font-semibold text-sm uppercase tracking-widest">
             How It Works
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-4">
@@ -66,7 +66,7 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connector line — desktop only */}
-          <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 z-0" />
+          <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-200 z-0" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step) => (
@@ -75,11 +75,11 @@ export default function HowItWorks() {
                 className="flex flex-col items-center text-center"
               >
                 {/* Circle */}
-                <div className="w-20 h-20 rounded-full bg-blue-700 flex flex-col items-center justify-center shadow-lg mb-5 flex-shrink-0">
-                  <span className="text-cyan-300 text-xs font-bold">
+                <div className="w-20 h-20 rounded-full bg-amber-700 flex flex-col items-center justify-center shadow-lg mb-5 flex-shrink-0">
+                  <span className="text-yellow-300 text-xs font-bold">
                     {step.step}
                   </span>
-                  <step.icon size={24} className="text-cyan-300 leading-none" />
+                  <step.icon size={24} className="text-yellow-300 leading-none" />
                 </div>
                 <h3 className="text-gray-900 font-bold text-base mb-2">
                   {step.title}
@@ -96,7 +96,7 @@ export default function HowItWorks() {
         <div className="text-center mt-14">
           <a
             href="#contact"
-            className="bg-blue-700 text-white font-bold px-10 py-4 rounded-full text-base hover:bg-blue-800 transition-colors shadow-lg inline-flex items-center gap-2"
+            className="bg-amber-700 text-white font-bold px-10 py-4 rounded-full text-base hover:bg-amber-800 transition-colors shadow-lg inline-flex items-center gap-2"
           >
             Start Your Application
             <ArrowRight size={18} />

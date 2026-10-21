@@ -135,11 +135,11 @@ export default function EMICalculator() {
   const CurrentIcon = selectedLoan.icon;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-blue-700 font-semibold text-sm uppercase tracking-widest">
+          <span className="text-amber-700 font-semibold text-sm uppercase tracking-widest">
             Financial Planning
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-4">
@@ -163,10 +163,10 @@ export default function EMICalculator() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button
-                    className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-left text-gray-900 font-medium flex items-center justify-between hover:border-blue-400 active:border-blue-600 transition-colors focus:outline-none focus:border-blue-600"
+                    className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-left text-gray-900 font-medium flex items-center justify-between hover:border-amber-400 active:border-amber-600 transition-colors focus:outline-none focus:border-amber-600"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="text-blue-700">
+                      <div className="text-amber-700">
                         <CurrentIcon size={20} />
                       </div>
                       <span>{selectedLoan.name}</span>
@@ -184,7 +184,7 @@ export default function EMICalculator() {
                         key={loan.id}
                         onClick={() => handleLoanChange(loan.id)}
                       >
-                      <div className="text-blue-700 flex-shrink-0">
+                      <div className="text-amber-700 flex-shrink-0">
                         <LoanIcon size={18} />
                       </div>
                         <span>{loan.name}</span>
@@ -201,7 +201,7 @@ export default function EMICalculator() {
                 <label className="block text-sm font-semibold text-gray-900">
                   Loan Amount
                 </label>
-                <span className="text-lg font-bold text-blue-700">
+                <span className="text-lg font-bold text-amber-700">
                   ₹ {loanAmount.toLocaleString("en-IN")}
                 </span>
               </div>
@@ -211,7 +211,7 @@ export default function EMICalculator() {
                 max={selectedLoan.maxAmount}
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-700"
+                className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-700"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
                 <span>
@@ -229,7 +229,7 @@ export default function EMICalculator() {
                 <label className="block text-sm font-semibold text-gray-900">
                   Loan Tenure
                 </label>
-                <span className="text-lg font-bold text-blue-700">
+                <span className="text-lg font-bold text-amber-700">
                   {tenure} {tenure === 1 ? "year" : "years"}
                 </span>
               </div>
@@ -239,7 +239,7 @@ export default function EMICalculator() {
                 max={selectedLoan.maxTenure}
                 value={tenure}
                 onChange={(e) => setTenure(Number(e.target.value))}
-                className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-700"
+                className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-700"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
                 <span>{selectedLoan.minTenure} year</span>
@@ -253,7 +253,7 @@ export default function EMICalculator() {
                 <label className="block text-sm font-semibold text-gray-900">
                   Interest Rate
                 </label>
-                <span className="text-lg font-bold text-blue-700">
+                <span className="text-lg font-bold text-amber-700">
                   {interestRate.toFixed(2)}% p.a.
                 </span>
               </div>
@@ -264,7 +264,7 @@ export default function EMICalculator() {
                 value={interestRate}
                 step={0.01}
                 onChange={(e) => setInterestRate(Number(e.target.value))}
-                className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-700"
+                className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-700"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
                 <span>{selectedLoan.minRate.toFixed(2)}%</span>
@@ -274,36 +274,36 @@ export default function EMICalculator() {
           </div>
 
           {/* Right: Result Section */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg p-8 text-white flex flex-col justify-center items-center">
+          <div className="bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl shadow-lg p-8 text-white flex flex-col justify-center items-center">
             {/* Monthly EMI */}
             <div className="mb-8 w-full text-center">
-              <p className="text-sm font-medium text-blue-100 mb-2">
+              <p className="text-sm font-medium text-amber-100 mb-2">
                 Your Monthly EMI will be
               </p>
               <div className="text-5xl font-bold mb-1">
                 ₹ {emi.toLocaleString("en-IN")}
               </div>
-              <p className="text-xs text-blue-100">
+              <p className="text-xs text-amber-100">
                 *Interest rate is subject to change based on RBI guidelines
               </p>
             </div>
 
             {/* Breakdown */}
-            <div className="space-y-4 pt-6 w-full border-t border-blue-400">
+            <div className="space-y-4 pt-6 w-full border-t border-amber-400">
               <div className="flex justify-between items-center">
-                <span className="text-blue-100 font-medium">Amount Payable</span>
+                <span className="text-amber-100 font-medium">Amount Payable</span>
                 <span className="text-lg font-bold">
                   ₹ {totalPayable.toLocaleString("en-IN")}
                 </span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-blue-100 font-medium">Interest Amount</span>
+                <span className="text-amber-100 font-medium">Interest Amount</span>
                 <span className="text-lg font-bold">
                   ₹ {interestAmount.toLocaleString("en-IN")}
                 </span>
               </div>
-              <div className="flex justify-between items-center pt-3 border-t border-blue-400">
-                <span className="text-blue-100 font-medium">Principal Amount</span>
+              <div className="flex justify-between items-center pt-3 border-t border-amber-400">
+                <span className="text-amber-100 font-medium">Principal Amount</span>
                 <span className="text-lg font-bold">
                   ₹ {loanAmount.toLocaleString("en-IN")}
                 </span>
@@ -311,7 +311,7 @@ export default function EMICalculator() {
             </div>
 
             {/* Apply Now Button */}
-            <button className="w-full mt-8 bg-white text-blue-700 font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors shadow-md">
+            <button className="w-full mt-8 bg-white text-amber-700 font-bold py-3 rounded-lg hover:bg-amber-50 transition-colors shadow-md">
               Apply Now →
             </button>
           </div>

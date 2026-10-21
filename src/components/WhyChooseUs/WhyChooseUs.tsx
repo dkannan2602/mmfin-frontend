@@ -26,8 +26,8 @@ const features = [
     description:
       "From application to approval in 48 hours. Get instant eligibility checks and same-day document verification.",
     highlight: "48 Hour Approval",
-    bgClass: "from-blue-500 to-purple-500",
-    badgeClass: "bg-blue-500",
+    bgClass: "from-amber-500 to-orange-500",
+    badgeClass: "bg-amber-500",
   },
   {
     icon: Award,
@@ -74,23 +74,23 @@ export default function WhyChooseUs() {
     <section className="relative py-20 bg-linear-to-b from-slate-50 to-white overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Award size={16} />
             <span>Why Customers Trust Us</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Experience The Difference With{" "}
-            <span className="bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              MM Finance
+            <span className="bg-linear-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
+              Meenakshi Associate
             </span>
           </h2>
           
@@ -111,7 +111,7 @@ export default function WhyChooseUs() {
               {/* Card */}
               <div className={`relative h-full bg-white rounded-2xl border-2 transition-all duration-500 overflow-hidden ${
                 activeCard === index 
-                  ? 'border-transparent shadow-2xl shadow-blue-500/20 -translate-y-2' 
+                  ? 'border-transparent shadow-2xl shadow-amber-500/20 -translate-y-2' 
                   : 'border-gray-200 shadow-lg hover:border-gray-300'
               }`}>
                 {/* Gradient Border Effect */}
@@ -158,23 +158,23 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-20 bg-linear-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="mt-20 bg-linear-to-r from-yellow-500 to-amber-600 rounded-3xl p-8 md:p-12 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl font-bold text-white">10,000+</div>
-              <div className="text-blue-100">Satisfied Customers</div>
+              <div className="text-amber-100">Satisfied Customers</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold text-white">₹500Cr+</div>
-              <div className="text-blue-100">Loans Disbursed</div>
+              <div className="text-amber-100">Loans Disbursed</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold text-white">25+</div>
-              <div className="text-blue-100">Banking Partners</div>
+              <div className="text-amber-100">Banking Partners</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold text-white">4.8/5</div>
-              <div className="text-blue-100">Customer Rating</div>
+              <div className="text-amber-100">Customer Rating</div>
             </div>
           </div>
         </div>

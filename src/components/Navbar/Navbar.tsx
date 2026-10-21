@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, Twitter } from "lucide-react";
+import Image from "next/image";
 import {
   BrandFacebook,
   BrandInstagram,
@@ -16,7 +17,7 @@ const navLinks = [
 ];
 
 const PHONE_NUMBER = "+91 98765 43210";
-const EMAIL = "info@maduraimeenakshifinance.in";
+const EMAIL = "info@meenakshi-associate.in";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,12 +25,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       {/* Top Info Bar */}
-      <div className="bg-blue-900 text-white py-2 sm:py-1.5 px-3 sm:px-6 lg:px-8">
+      <div className="bg-linear-to-r from-yellow-400 via-amber-400 to-orange-400 text-gray-900 py-2 sm:py-1.5 px-3 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
           {/* Phone on Mobile */}
           <a
             href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors text-xs sm:text-sm"
+            className="flex items-center gap-1.5 hover:text-gray-700 transition-colors text-xs sm:text-sm font-semibold"
           >
             <Phone size={14} />
             <span>{PHONE_NUMBER}</span>
@@ -38,7 +39,7 @@ export default function Navbar() {
           {/* Email - Hidden on Mobile */}
           <a
             href={`mailto:${EMAIL}`}
-            className="hidden sm:flex items-center gap-1.5 hover:text-cyan-300 transition-colors text-xs sm:text-sm"
+            className="hidden sm:flex items-center gap-1.5 hover:text-gray-700 transition-colors text-xs sm:text-sm font-semibold"
           >
             <Mail size={14} />
             <span>{EMAIL}</span>
@@ -46,7 +47,7 @@ export default function Navbar() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="text-gray-300 hidden sm:inline text-xs">Follow:</span>
+            <span className="text-gray-700 hidden sm:inline text-xs font-semibold">Follow:</span>
             {[
               { icon: BrandFacebook, href: "#", label: "Facebook" },
               { icon: BrandInstagram, href: "#", label: "Instagram" },
@@ -57,7 +58,7 @@ export default function Navbar() {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="hover:text-cyan-300 transition-colors"
+                className="hover:text-gray-700 transition-colors text-gray-900 font-semibold"
               >
                 <social.icon size={14} />
               </a>
@@ -70,14 +71,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-blue-700 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">MM</span>
-            </div>
-            <span className="text-blue-800 font-bold text-xl tracking-tight">
-              Madurai Meenakshi Finance
-            </span>
-          </div>
+          <a href="#home" className="flex items-center">
+            <Image
+              src="/Image/logo/logo.png"
+              alt="Meenakshi Associate"
+              width={120}
+              height={90}
+              priority
+              className="h-16 w-auto"
+            />
+          </a>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
@@ -85,7 +88,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-gray-700 font-medium hover:text-blue-700 transition-colors text-sm"
+                className="text-gray-700 font-medium hover:text-amber-700 transition-colors text-sm"
               >
                 {link.label}
               </a>
@@ -120,7 +123,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-gray-700 font-medium hover:text-blue-700 transition-colors"
+                className="text-gray-700 font-medium hover:text-amber-700 transition-colors"
               >
                 {link.label}
               </a>
