@@ -2,22 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import { settingsAPI } from "@/lib/api";
-
-interface Settings {
-  officeAddress: string;
-  phone: string;
-  email: string;
-  businessHours: string;
-}
 
 export default function PrivacyPolicy() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastUpdated, setLastUpdated] = useState("");
-  const [settings, setSettings] = useState<Settings | null>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLastUpdated(
@@ -29,114 +18,20 @@ export default function PrivacyPolicy() {
     );
   }, []);
 
-  useEffect(() => {
-    const fetchSettings = async () => {
-      try {
-        const response = await settingsAPI.get();
-        if (response.data.success) {
-          setSettings(response.data.settings);
-        }
-      } catch (error) {
-        console.error("Failed to fetch settings:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchSettings();
-  }, []);
+  const contactInfo = {
+    email: "info@meenakshi-associate.in",
+    phone: "+91 98765 43210",
+    address: "123, Anna Salai, Chennai – 600 002, Tamil Nadu",
+    businessHours: "Mon – Sat: 9:00 AM – 7:00 PM"
+  };
 
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MM</span>
-              </div>
-              <span className="text-gray-900 font-bold text-lg hidden sm:inline">
-                Madurai Meenakshi Finance
-              </span>
-            </Link>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/#services"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="/#about"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/#contact"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X size={24} className="text-gray-900" />
-              ) : (
-                <Menu size={24} className="text-gray-900" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden pb-4 flex flex-col gap-3">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors block py-2"
-              >
-                Home
-              </Link>
-              <Link
-                href="/#services"
-                className="text-gray-700 hover:text-blue-600 transition-colors block py-2"
-              >
-                Services
-              </Link>
-              <Link
-                href="/#about"
-                className="text-gray-700 hover:text-blue-600 transition-colors block py-2"
-              >
-                About
-              </Link>
-              <Link
-                href="/#contact"
-                className="text-gray-700 hover:text-blue-600 transition-colors block py-2"
-              >
-                Contact
-              </Link>
-            </div>
-          )}
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Content Section */}
-      <main className="bg-gray-50">
+      <main className="bg-gray-50 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
           <div className="mb-12">
@@ -155,7 +50,7 @@ export default function PrivacyPolicy() {
                 1. Introduction
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Madurai Meenakshi Finance ("we", "our", or "us") is committed to
+                Meenakshi Associate ("we", "our", or "us") is committed to
                 protecting your privacy. This Privacy Policy explains how we
                 collect, use, disclose, and safeguard your information when you
                 visit our website and use our services.
@@ -259,24 +154,18 @@ export default function PrivacyPolicy() {
                 privacy practices, please contact us at:
               </p>
               <div className="mt-4 text-gray-700 space-y-2">
-                {!loading && settings ? (
-                  <>
-                    <p>
-                      <strong>Email:</strong> {settings.email}
-                    </p>
-                    <p>
-                      <strong>Phone:</strong> {settings.phone}
-                    </p>
-                    <p>
-                      <strong>Address:</strong> {settings.officeAddress}
-                    </p>
-                    <p>
-                      <strong>Business Hours:</strong> {settings.businessHours}
-                    </p>
-                  </>
-                ) : (
-                  <p className="text-gray-500">Loading contact information...</p>
-                )}
+                <p>
+                  <strong>Email:</strong> {contactInfo.email}
+                </p>
+                <p>
+                  <strong>Phone:</strong> {contactInfo.phone}
+                </p>
+                <p>
+                  <strong>Address:</strong> {contactInfo.address}
+                </p>
+                <p>
+                  <strong>Business Hours:</strong> {contactInfo.businessHours}
+                </p>
               </div>
             </section>
           </div>

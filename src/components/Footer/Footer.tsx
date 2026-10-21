@@ -12,16 +12,15 @@ import {
 const footerLinks = {
   Services: [
     { label: "Home Loan", href: "#services" },
+    { label: "Loan Against Property", href: "#services" },
+    { label: "Vehicle Loan", href: "#services" },
     { label: "Personal Loan", href: "#services" },
     { label: "Business Loan", href: "#services" },
-    { label: "Vehicle Loan", href: "#services" },
-    { label: "Loan Against Property", href: "#services" },
   ],
   Company: [
     { label: "About Us", href: "#about" },
     { label: "How It Works", href: "#" },
     { label: "Why Choose Us", href: "#" },
-    { label: "Careers", href: "#" },
   ],
   Support: [
     { label: "Contact Us", href: "#contact" },
@@ -88,7 +87,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-gray-400 text-sm hover:text-white transition-colors"
+                      className="text-gray-400 text-sm hover:text-amber-600 transition-colors"
                     >
                       {link.label}
                     </a>
